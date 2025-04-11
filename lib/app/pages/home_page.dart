@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_currency_today/app/components/text_field_component.dart';
-import 'package:flutter_currency_today/app/services/currency_service.dart';
+import 'package:flutter_realtime_exchange/app/components/text_field_component.dart';
+import 'package:flutter_realtime_exchange/app/services/currency_service.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

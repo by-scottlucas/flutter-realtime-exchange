@@ -1,8 +1,9 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class CurrencyService {
-  final String _baseApi = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL";
+  final String _baseApi = dotenv.env['API_URL'] ?? "";
 
   Future<Map?> getData() async {
     String request = _baseApi;
@@ -13,7 +14,7 @@ class CurrencyService {
       } else {
         return null;
       }
-    } catch (e) {
+    } catch (error) {
       return null;
     }
   }
